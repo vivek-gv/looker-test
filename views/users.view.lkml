@@ -73,4 +73,14 @@ view: users {
     type: count
     drill_fields: [id, last_name, first_name]
   }
+  dimension: age_group {
+    type: string
+    sql:
+      CASE
+        WHEN ${age} <= 25 THEN '18-25'
+        WHEN ${age} <= 35 THEN '26-35'
+        WHEN ${age} <= 50 THEN '36-50'
+        ELSE '50+'
+      END ;;
+  }
 }
