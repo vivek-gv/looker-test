@@ -83,4 +83,10 @@ view: users {
         ELSE '50+'
       END ;;
   }
+  dimension: age_tier_interval {
+    type: tier
+    style: interval
+    tiers: [18, 26, 36, 51]
+    sql: ${age} ;;
+  }
 }
