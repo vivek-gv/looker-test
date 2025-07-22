@@ -95,4 +95,9 @@ view: users {
     tiers: [20, 25, 30, 35, 40, 45, 50]
     sql: ${age} ;;
   }
+  dimension_group: created_month {
+    type: time
+    timeframes: [month, month_name, year]
+    sql: ${created_date} ;;
+  }
 }
